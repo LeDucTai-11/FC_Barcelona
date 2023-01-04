@@ -221,6 +221,14 @@ html {
     filter: drop-shadow(0 -0.1rem 0 rgba(0,0,0,.08));
 }
 
+.fan__language__choice--active span {
+    color: #767676;
+    font-size: 10px;
+    font-weight: normal;
+    position: absolute;
+    right: 32px;
+}
+
 .fan__language__choice--active::before {
     display: block;
     position: absolute;
@@ -246,6 +254,10 @@ html {
     color: #727272;
     font-weight: normal;
     margin-top: 12px;
+}
+
+.fan__language-item:hover {
+    background-color: #efefef;
 }
 
 
@@ -670,6 +682,7 @@ html {
 }
 
 .team__list .team__item h1 {
+    padding-top: 32px;
     padding-bottom: 34px;
     text-align: center;
     color: #742956;

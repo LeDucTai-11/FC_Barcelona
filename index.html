@@ -63,12 +63,15 @@
               </span>
               <ul class="fan__language__choice">
                 <li>Choose your language</li>
-                <li class="fan__language__choice--active">English</li>
-                <li>Català</li>
-                <li>Castellano</li>
-                <li>Français</li>
-                <li>日本語</li>
-                <li>中文</li>
+                <li class="fan__language-item fan__language__choice--active">
+                  English
+                  <span>Viewing</span>
+                </li>
+                <li class="fan__language-item">Català</li>
+                <li class="fan__language-item">Castellano</li>
+                <li class="fan__language-item">Français</li>
+                <li class="fan__language-item">日本語</li>
+                <li class="fan__language-item">中文</li>
               </ul>
             </div>
 
@@ -253,15 +256,15 @@
         </div>
 
         <div class="team__role__list">
-          <div class="team__role__item">Goalkeepers</div>
-          <div class="team__role__item">Defenders</div>
-          <div class="team__role__item">Midfielders</div>
-          <div class="team__role__item">Forwards</div>
-          <div class="team__role__item">Coaching staff</div>
+          <a href="#goalkeepers" class="team__role__item">Goalkeepers</a>
+          <a href="#defenders" class="team__role__item">Defenders</a>
+          <a href="#midfielders" class="team__role__item">Midfielders</a>
+          <a href="#forwards" class="team__role__item">Forwards</a>
+          <a href="#coaches" class="team__role__item">Coaching staff</a>
         </div>
 
         <div class="team__list">
-          <div class="team__item">
+          <div class="team__item" id="goalkeepers">
             <h1>Goalkeepers</h1>
             <div class="team__member__list row">
               <div class="team__item__member col col-4">
@@ -327,7 +330,7 @@
             </div>
           </div>
 
-          <div class="team__item">
+          <div class="team__item" id="defenders">
             <h1>Defenders</h1>
             <div class="team__member__list row">
               <div class="team__item__member col col-4">
@@ -544,7 +547,7 @@
             </div>
           </div>
 
-          <div class="team__item">
+          <div class="team__item" id="midfielders">
             <h1>Midfielders</h1>
             <div class="team__member__list row">
               <div class="team__item__member col col-4">
@@ -747,7 +750,7 @@
             </div>
           </div>
 
-          <div class="team__item">
+          <div class="team__item" id="forwards">
             <h1>Forwards</h1>
             <div class="team__member__list row">
               <div class="team__item__member col col-4">
@@ -957,7 +960,7 @@
             </div>
           </div>
 
-          <div class="team__item">
+          <div class="team__item" id="coaches">
             <h1>Coaching Staff</h1>
             <div class="team__member__list row">
               <div class="team__item__member col col-4 team__coach__member">
