@@ -347,6 +347,10 @@ html {
     min-width: 200px;
  }
 
+ .tickets__subitem .ticket__list .ticket__item:hover {
+    text-decoration: underline;
+ }
+
  .tickets__subitem .ticket__list .ticket__item:last-child {
     margin-bottom: 0;
  }
@@ -386,6 +390,10 @@ html {
 .service__TV .service__TV__list .service__TV__item {
     padding: 12px 0;
     font-size: 12px;
+}
+.service__TV .service__TV__list .service__TV__item:hover,
+.service__club__barca .service__club .service__club__list li:hover {
+    text-decoration: underline;
 }
 /* END : Barca TV+ */
 
@@ -670,7 +678,6 @@ html {
 
 .team__item__member {
     position: relative;
-    padding-bottom: 24px;
     overflow: hidden;
     cursor: pointer;
 }
@@ -970,27 +977,41 @@ html {
 }
 
 .partners__logo__item {
+    padding: 16px;
+    width: 18%;
+}
+
+.partners__logo__item a {
+    line-height: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    position: relative;
 }
 
-.partners__logo__item:hover {
-    border-bottom: 4px solid #fdc52c;
+.partners__logo__item a::after {
+    display: block;
+    position: absolute;
+    content: "";
+    bottom: -16px;
+    left: 51%;
+    right: 50%;
+    height: 4px;
+    background-color: #fdc52c;
+    transition: left .2s ease,right .2s ease;
 }
 
-.partners__logo__item img {
-    width: 175px;
-    height: 100%;
-    object-fit: 1;
+.partners__logo__item a:hover::after {
+    left: 0;
+    right: 0;
 }
 
-.partners__logo__item span {
-    color: #fff;
-    font-weight: 800;
-    font-size: 42px;
-    transform: translateX(-26px);
+.partners__logo__item svg {
+    width: 100%;
+    height: auto;
+    fill: #fff;
 }
+
 
 
 /* Footer */
@@ -1022,7 +1043,7 @@ html {
 }
 
 .footer__social__media:hover {
-    border: 2px solid #fff;
+    outline: 2px solid #fff;
 }
 
 .footer__social__fb {
