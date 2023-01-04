@@ -447,6 +447,8 @@ html {
     line-height: calc(var(--header__main__height) - var(--header__media__height));
     text-align: center;
     font-size: 28px;
+    cursor: pointer;
+    position: static;
 }
 
 /* Start: Barca Team */
@@ -737,7 +739,8 @@ html {
     top: 50%;
     left: 50%;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     font-weight: 800;
     font-size: 112px;
     background: linear-gradient(
