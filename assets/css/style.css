@@ -1,7 +1,6 @@
 :root {
     --header__main__height : 120px;
     --header__logo__width: 324px;
-    --header__media__height : 48px;
     --header__serivce__item__width : 190px;
     --header__navbar__height : 48px;
     --content__slider__height : 150px;
@@ -20,16 +19,17 @@ html {
 
 .row {
     display: flex;
-    margin: 0 -8px;
+    margin: 0 -4px;
+    flex-wrap: wrap;
 }
 
 .row + .row {
     padding-top: 12px;
 }
 
-
-.col + .col {
-    margin-left: 8px;
+.col {
+    padding: 0px 4px;
+    margin-bottom: 8px;
 }
 
 .col-12 {
@@ -48,6 +48,10 @@ html {
     width: 25%;
 }
 
+#header__mobile {
+    display: none;
+}
+
 #header .header__main {
     height: var(--header__main__height);
     display: flex;
@@ -58,15 +62,21 @@ html {
 .header__main .header__logo {
     background-color: #0A0927;
     color: #fff;
-    line-height: var(--header__main__height);
     width: var(--header__logo__width);
-    padding: 0 24px;
     border-right: 1px solid #29283d;
     cursor: pointer;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.header__logo::before {
+.header__logo-tablet {
+    display: none;
+}
+
+.header__logo::before,
+.header__logo-tablet::before {
     content: "";
     position: absolute;
     bottom: 15px;
@@ -76,10 +86,12 @@ html {
     background-color: #154284;
     transition: all 0.2s ease-in-out;
 }
-.header__logo:hover::before {
+.header__logo:hover::before,
+.header__logo-tablet:hover::before {
     height: 40%;
 }
-.header__logo::after {
+.header__logo::after,
+.header__logo-tablet::after {
     content: "";
     position: absolute;
     top: 8px;
@@ -89,7 +101,9 @@ html {
     background-color: #cd122d;
     transition: all 0.2s ease-in-out;
 }
-.header__logo:hover::after {
+
+.header__logo:hover::after,
+.header__logo-tablet:hover::after {
     height: 25%;
 }
 
@@ -97,7 +111,7 @@ html {
 .header__main .header__logo img {
     width: 40px;
     height: 40px;
-    transform: translateY(8px);
+    transform: translateY(3px);
 }
 
 .header__main .header__logo h2 {
@@ -109,12 +123,13 @@ html {
 }
 
 .header__main .header__choice {
-    width: calc(100% - var(--header__logo__width));
+    flex: 1;
 }
 
 .header__choice .header__media {
     background-color: #0a0927;
-    height: var(--header__media__height);
+    /* height: var(--header__media__height); */
+    height: 40%;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #29283d;
@@ -124,7 +139,7 @@ html {
     color: #ffffff99;
     display: flex;
     margin-left: 16px;
-    line-height: var(--header__media__height);
+    align-items: center;
     font-size: 10px;
     text-transform: uppercase;
 }
@@ -139,44 +154,61 @@ html {
     color: #fff;
 }
 
-.header__media .media__fan {
+
+/* Media fan */
+.media__fan {
     display: flex;
     color: #fff;
-}
-
-.header__media .media__fan .media__fan__item {
-    margin-left: 16px;
-    line-height: var(--header__media__height);
+    justify-content: end;
+    align-items: center;
     font-size: 13px;
-    cursor: pointer;
 }
 
-.media__fan .fan__register {
+.media__fan__list,
+.fan__user-item,
+.fan__user__register-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.media__fan__list {
+    margin-right: 8px;
+}
+.media__fan__user {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    height: 100%;
+}
+
+
+.fan__user-item {
+    margin-right: 8px;
+}
+.fan__user-item i,
+.fan__user-item img {
+    margin-right: 4px;
+}
+
+
+.fan__user__login:hover strong {
+    text-decoration: underline;
+}
+
+.fan__user__register-btn {
     background: linear-gradient(90deg,#8c1a17,#cd122d);
-    color: #fff;
-    margin: 8px 0;
-    border-radius: 4px;
-    font-size: 16px;
-    margin-left: 16px;
-    margin-right: 16px;
-    cursor: pointer;
+    padding: 6px;
+    border-radius: 3px;
+    flex: 1;
 }
 
-.media__fan .fan__register img {
-    transform: translateY(6px);
-    margin-left: 8px;
-}
 
-.media__fan .fan__register strong {
-    padding: 4px 0;
-    padding-right: 8px;
-    font-size: 12px;
-}
-
-.media__fan .fan__language {
-    padding-right: 20px;
+.fan__language {
+    padding: 13px 16px;
     border-right: 1px solid #29283d;
     position: relative;
+    cursor: pointer;
 }
 
 .media__fan .fan__language i {
@@ -260,20 +292,18 @@ html {
     background-color: #efefef;
 }
 
-
-
-.media__fan .fan__site {
-    margin-right: 16px;
+.fan__site {
+    display: flex;
+    align-items: center;
+}
+.fan__site img {
+    margin-left: 8px;
 }
 
-.media__fan .fan__site img {
-    margin-left: 4px;
-    transform: translateY(4px);
-}
 
 /* Header Service */
 .header__choice .header__service {
-    height: calc(var(--header__main__height) - var(--header__media__height));
+    height: 60%;
     width: 100%;
     background-color: #181733;
     color: #fff;
@@ -281,13 +311,18 @@ html {
 }
 
 .header__choice .header__service .service__item {
-    min-width: var(--header__serivce__item__width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     text-align: center;
-    line-height: calc(var(--header__main__height) - var(--header__media__height));
+    font-size: 16px;
     border-right: 1px solid #29283d;
     text-transform: uppercase;
     position: relative;
     cursor: pointer;
+    padding: 0 8px;
 }
 
 .header__choice .header__service .service__item:first-child {
@@ -295,7 +330,7 @@ html {
 }
 
 .header__service .service__item--active {
-    border-bottom: 8px solid #fdc52c;
+    border-bottom: 6px solid #fdc52c;
 }
 
 
@@ -310,11 +345,10 @@ html {
 .header__service .service__club__barca .service__club {
     position: absolute;
     display: flex;
-    left: -40%;
-    width: 180%;
+    top: calc(100% - 8px);
     background-color: #154284;
     text-transform: none;
-    z-index: 100;
+    z-index: 101;
     line-height: normal;
     text-align: left;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -323,6 +357,7 @@ html {
     transform: scale(0);
     font-weight: 700;
 }
+
 
 .service__item .tickets__subitem::before,
 .service__item .service__TV__list::before,
@@ -356,7 +391,7 @@ html {
 .tickets__subitem .ticket__list .ticket__item {
     font-size: 13px;
     margin: 0 16px 16px;
-    min-width: 200px;
+    min-width: 150px;
  }
 
  .tickets__subitem .ticket__list .ticket__item:hover {
@@ -378,15 +413,13 @@ html {
     position: absolute;
     display: block;
     top: calc(100% - 8px);
-    width: calc(100% + 16px);
-    left: -8px;
     background-color: #154284;
     list-style: none;
     line-height: normal;
     text-align: left;
     text-transform: none;
     padding: 0 16px;
-    z-index: 100;
+    z-index: 101;
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: transform .2s ease,opacity .1s ease;
@@ -402,18 +435,20 @@ html {
 .service__TV .service__TV__list .service__TV__item {
     padding: 12px 0;
     font-size: 12px;
+    min-width: 170px;
 }
 .service__TV .service__TV__list .service__TV__item:hover,
 .service__club__barca .service__club .service__club__list li:hover {
     text-decoration: underline;
 }
+
+.service__TV .service__TV__list .service__TV__item:last-child {
+    padding-bottom: 20px;
+}
 /* END : Barca TV+ */
 
 /* Start: Club */
 .header__service .service__club__barca .service__club {
-    top: calc(100% - 8px);
-    width: calc(200% + 48px);
-    left: calc(-50% - 24px);
     padding: 16px 0;
 }
 
@@ -430,26 +465,98 @@ html {
 
 .service__club__barca .service__club .service__club__list li {
     margin: 0 16px 16px;
-    min-width: 300px;
+    min-width: 190px;
 }
 
 .service__club__barca .service__club .service__club__list li:last-child {
     margin-bottom: 0;
 }
 /* END : Club */
-.header__service .service__item i {
-    transform: translateY(-4px);
+.header__service .service__item > i {
+    transform: translateY(-2px);
     font-size: 10px;
+    padding-left: 4px;
 }
 
 .header__choice .header__service .service__search {
-    width: calc(100% - var(--header__serivce__item__width)*6);
-    line-height: calc(var(--header__main__height) - var(--header__media__height));
-    text-align: center;
-    font-size: 28px;
+    width: 78px;
+    min-width: auto;
+    flex: 1 0 auto;
     cursor: pointer;
     position: static;
 }
+
+.service__search__btn{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.header__service .service__search .service__search__btn i {
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} 
+
+
+
+.service__search__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 95px;
+    top: var(--header__main__height);
+    left: 0;
+    background-color: #fff;
+    color: #222;
+    z-index: -1;
+    cursor: auto;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity .2s ease,transform .2s ease,box_shadow .2s ease;
+}
+
+.service__search__nav i {
+    font-size: 28px;
+}
+
+.service__search__nav--open {
+    opacity: 1;
+    transform: translateY(0);
+    box-shadow: 0 5rem 10rem 2rem rgb(0 0 0 / 70%);
+    z-index: 100;
+}
+
+.service__search__nav-input {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    width: 50%;
+    font-style: italic;
+    margin-left: 24px;
+    background: none;
+    font-weight: 500;
+}
+
+.service__search__nav-btn {
+    display: block;
+    padding: 12px 16px;
+    font-size: 12px;
+    border-radius: 16px;
+    border: 1px solid #efefef;
+    background-color: transparent;
+    transition: background-color .3s ease,color .3s ease;
+    cursor: pointer;
+}
+.service__search__nav-btn:hover {
+    background-color: #154284;
+    color: #fff;
+}
+
 
 /* Start: Barca Team */
 
@@ -474,7 +581,7 @@ html {
     padding: 36px 24px;
     margin: 0 auto;
     min-width: 80%;
-    z-index: 100;
+    z-index: 101;
     line-height: normal;
     text-align: left;
     text-transform: none;
@@ -525,10 +632,11 @@ html {
     position: sticky;
     top: 0;
     display: flex;
+    justify-content: center;
     height: var(--header__navbar__height);
     list-style: none;
     line-height: var(--header__navbar__height);
-    padding-left: 12%;
+    padding: 0 12%;
     color: #fff;
     font-size: 13px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -592,11 +700,18 @@ html {
     opacity: 0.4;
 }
 
-.content__slider h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.content__heading {
+    z-index: 100;
+    max-width: 890px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.content__heading h1 {
     text-align: center;
     color: #fdc52c;
     font-size: 52px;
@@ -613,7 +728,8 @@ html {
 #content .content__clb .content__team {
     margin: 0 16px;
     background-color: #fff;
-    border-radius: 16px 16px 0 0;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
 .content__team .team__desc {
@@ -665,6 +781,7 @@ html {
     background-color: #F8F8F8;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .team__role__list .team__role__item:hover {
@@ -756,6 +873,7 @@ html {
     font-style: italic;
     transform: translateX(-52%);
     transition: all 0.3s linear;
+    opacity: 0.4;
 }
 
 
@@ -773,7 +891,7 @@ html {
 .team__member__info__number,
 .team__member__info__first-name,
 .team__member__info__last-name {
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 800;
 }
 .team__member__info__first-name {
@@ -793,26 +911,25 @@ html {
     left: 0;
     transition: transform .3s ease-out,opacity .3s ease-out;
     padding-top: 8px;
-    margin: 0 32px 10px;
+    margin-bottom: 10px;
     color: #fff;
     transform: translateY(115%);
-    transition: all 0.3s linear;
-    border-top: 1px solid #808080;
+    /* border-top: 1px solid #808080; */
 }
 
-
-/* .member__stats__footer::before {
+.member__stats__footer::after {
     content: "";
-    width: 42px;
+    width: 420px;
     max-width: 90%;
     height: 1px;
     position: absolute;
-    top: 0.8rem;
+    top: -4px;
     left: 50%;
     transform: translateX(-50%);
     background: #fff;
     opacity: .2;
-} */
+}
+
 
 
 .member__stats__footer__list {
@@ -821,7 +938,14 @@ html {
     justify-content: space-around;
 }
 
-.member__stats__footer__list span {
+.member__stats__footer__item + .member__stats__footer__item {
+    padding-left: 8px;
+}
+
+.member__stats__footer__alltime-title,
+.member__stats__footer__alltime-value,
+.member__stats__footer__season-title,
+.member__stats__footer__season-value {
     display: block;
     text-align: center;
 }
@@ -855,6 +979,7 @@ html {
 .team__coach .team__coach__item {
     display: flex;
     margin: 4px -8px 0;
+    flex-wrap: wrap;
 }
 
 .team__coach .team__coach__item span {
@@ -864,7 +989,6 @@ html {
     background-color: #f3f3f3;
     text-transform: uppercase;
     font-size: 20px;
-    margin-right: 2px;
 }
 
 .team__coach .team__coach__item span:first-child {
@@ -875,81 +999,83 @@ html {
 
 /* Team awards */
 
-.content__award {
-    padding: 0 16px;
-}
 .team__award {
     background-color: #111025;
     width: 100%;
-    height: 180px;
-    border-radius: 0 0 16px 16px;
     border: 1px solid #262b47;
-    padding: 0 16px;
+    padding: 0 8px;
 }
 
 .team__award__list {
-    margin: 40px 0;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 176px;
+    margin: 0;
 }
 
 .team__award__item {
     position: relative;
-    background-image: url(../img/horizontal-flash.jpg);
-    height: 100px;
+    height: 88px;
+    border: 1px solid #000;
     margin: 0 8px;
-    
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 50%);
+    border-radius: 6px;
+    overflow: hidden;
+    padding: 0;
 }
-
-.award__item__content {
+.team__award__background {
+    background-color: #154284;
+    background-image: url('../img/horizontal-flash.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.team__award__background-text {
+    width: 100%;
+    height: 28px;
+    background: #000;
     position: absolute;
     top: 50%;
+    z-index: 10;
     transform: translateY(-50%);
+}
+.team__award__item-content {
+    height: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
+    height: 100%;
     color: #fff;
-    width: 100%;
-    height: 20px;
-    background-color: #000;
-    font-weight: 800;
 }
-
-.award__item__content img {
-    width: 100px;
-    height: 60px;
-    transform: translate(-15px,-20px);
+.award__item__title,
+.award__item__trophie {
+    font-size: 11px;
+    z-index: 10;
+    font-weight: 700;
+    line-height: 14px;
 }
-
-.award__item__content .award__item__amount {
-    font-size: 62px;
-    color: #fdc52c;
-    transform: translate(-25px,-34px);
+.award__item__title {
+    margin-right: 4px;
 }
-
-.award__item__content .award__item__title,
-.award__item__content .award__item__trophie {
-    font-size: 10px;
-    line-height: 20px;
-}
-
-
-.award__item__content .award__item__trophie {
+.award__item__trophie {
     text-transform: uppercase;
-    transform: translateX(-16px);
 }
-
-.award__item__laliga .award__item__amount {
-    transform: translate(-36px,-34px);
+.team__award__item-content img {
+    position: static;
+    height: 50px;
+    width: 38px;
+    z-index: 10;
 }
-
-.award__item__laliga .award__item__trophie {
-    transform: translateX(-24px);
-}
-
-.award__item__fifa .award__item__amount {
-    transform: translate(-42px,-34px);
-}
-
-.award__item__fifa .award__item__trophie {
-    transform: translateX(-30px);
+.award__item__amount {
+    font-size: 62px;
+    line-height: 75px;
+    color: #fdc52c;
+    z-index: 10;
+    font-weight: 800;
+    margin: 0 8px;
 }
 
 
@@ -957,6 +1083,7 @@ html {
 .team__partners {
     position: relative;
     background-image: url('../img/partner.jpg');
+    /* background-image: url('../img/svgexport-37.svg'); */
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -1047,14 +1174,17 @@ html {
     padding: 16px 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .footer__social__media {
     margin: 4px;
     padding: 12px;
     color: #fff;
-    min-width: 135px;
+    max-width: 158px;
+    min-width: 104px;
     font-weight: 500;
+    flex: 1 1 13%;
     cursor: pointer;
 }
 
@@ -1163,9 +1293,12 @@ html {
     display: flex;
 }
 
-.footer__corporate__copyright,
+.footer__corporate__copyright {
+    width: 40%;
+}
+
 .footer__corporate__group {
-    width: 50%;
+    width: 60%;
 }
 
 .footer__corporate__copyright p {
@@ -1185,6 +1318,7 @@ html {
     list-style: none;
     display: flex;
     opacity: 0.8;
+    flex-wrap: wrap;
 }
 
 .footer__corporate__group li {

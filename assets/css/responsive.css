@@ -1,0 +1,600 @@
+@media (max-width: 1285px) {
+
+    .team__award__list {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .team__award__item {
+        width: calc(50% - 48px);
+        margin: 24px;
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1280px) {
+
+    .header__media .media__social .media__social__item {
+        font-size: 16px;
+        margin-left: 16px;
+    }
+
+    .header__choice .header__service .service__item {
+        font-size: 10px;
+    }
+
+    /* Tickets & Museum */
+    .tickets__subitem .ticket__list .ticket__item,
+    .service__club__barca .service__club .service__club__list li,
+    .service__TV .service__TV__list .service__TV__item {
+        font-size: 11px;
+    }
+
+}
+
+@media (min-width: 1024px) and (max-width: 1100px) {
+    #header .header__main {
+        height: 112px;
+    }
+
+    .header__choice .header__media {
+        height: 50%;
+    }
+
+    .header__choice .header__service {
+        height: 50%;
+    }
+
+    .header__main .header__logo {
+        max-width: 23%;
+    }
+
+    .header__main .header__logo img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .header__main .header__logo h2 {
+        font-size: 20px;
+    }
+
+    .fan__language__choice {
+        top: 100%;
+    }
+
+
+    .media__heading--none {
+        display: none;
+    }
+
+    .header__media .media__social .media__social__item {
+        font-size: 14px;
+        margin-left: 12px;
+    }
+
+    .header__choice .header__service .service__item {
+        font-size: 9px;
+    }
+
+    /* Tickets & Museum */
+    .tickets__subitem .ticket__list .ticket__item,
+    .service__club__barca .service__club .service__club__list li,
+    .service__TV .service__TV__list .service__TV__item {
+        font-size: 10px;
+    }
+
+    .tickets__subitem .ticket__list .ticket__item {
+        min-width: 120px;
+    }
+
+    .service__club__barca .service__club .service__club__list li {
+        min-width: 160px;
+    }
+
+    .service__TV .service__TV__list .service__TV__item {
+        min-width: 140px;
+    }
+
+    .header__service .service__team .service__barca__team {
+        top: 112px;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1286px) {
+    .team__member__info__large-name {
+        font-size: 80px;
+    }
+
+    .team__member__info__number {
+        font-size: 28px;
+    }
+
+    .team__member__info__first-name,
+    .team__member__info__last-name {
+        font-size: 26px;
+    }
+
+    .stegen__member .team__member__info__position {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width:1000px) {
+    .team__member__info__large-name {
+        font-size: 80px;
+    }
+
+    .team__member__info__number {
+        font-size: 28px;
+        display: block;
+    }
+
+    .team__item__member:hover .team__member__info__large-name {
+        transform: translate(-52%,-38px);
+    }
+    .team__item__member:hover .team__member__info {
+        transform: translateY(-52px);
+        padding-bottom: 4px;
+    }
+    .team__member__info__first-name {
+        display: block;
+    }
+
+    .team__member__info__first-name,
+    .team__member__info__last-name {
+        font-size: 24px;
+    }
+
+    .member__stats__footer__season-title,
+    .member__stats__footer__season-value {
+        display: none;
+    }
+    .member__stats__footer__alltime-title,
+    .member__stats__footer__alltime-value {
+        display: block;
+        font-size: 20px;
+    }
+    .member__stats__footer__alltime-title {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 840px) and (max-width: 1024px) {
+    .header__main .header__logo {
+        display: none;
+    }
+
+    .header__logo-tablet {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid #29283d;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 11px;
+        background-color: #181733;
+        min-width: 200px;
+        position: relative;
+        cursor: pointer;
+    }
+    
+
+    .header__choice .header__media {
+        height: 50%;
+    }
+
+    .header__choice .header__service {
+        height: 50%;
+    }
+
+    .header__logo-tablet img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .header__choice {
+        width: 100%;
+    }
+
+    .header__media .media__social {
+        margin-left: 0;
+    }
+
+    .media__social__follow {
+        margin-left: 12px;
+    }
+
+    .header__media .media__social .media__social__item {
+        font-size: 14px;
+        margin-left: 12px;
+    }
+
+    .media__heading--none {
+        display: none;
+    }
+
+    .header__choice .header__service .service__item {
+        font-size: 10px;
+    }
+
+    /* Tickets & Museum */
+    .tickets__subitem .ticket__list .ticket__item,
+    .service__club__barca .service__club .service__club__list li,
+    .service__TV .service__TV__list .service__TV__item {
+        font-size: 9px;
+    }
+
+    .tickets__subitem .ticket__list .ticket__item {
+        min-width: 100px;
+    }
+
+    .service__club__barca .service__club .service__club__list li {
+        min-width: 140px;
+    }
+
+    .service__TV .service__TV__list .service__TV__item {
+        min-width: 130px;
+    }
+
+    .header__navbar {
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 1025px) {
+    .partners__logo__item {
+        width: 20%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 840px) {
+    #header,
+    .header__navbar {
+        display: none;
+    }
+
+    #header__mobile {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background: #181733;
+        z-index: 100;
+        color: #fff;
+        display: block;
+    }
+    .header__mobile__logo {
+        height: 44px;
+        padding: 0 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        
+    }
+    .header___mobile__logo-menu i {
+        font-size: 20px;
+    }
+    .header__mobile__logo-name {
+        display: flex;
+        align-items: center;
+    }
+    .header__mobile__logo-name img {
+        width: 36px;
+        height: 36px;
+        margin-right: 4px;
+    }
+    .header__mobile__logo-name h2 {
+        text-transform: uppercase;
+    }
+
+    .header__mobile__logo-fan{
+        margin: 2px 0;
+    }
+    .header__mobile__logo-culer {
+        display: flex;
+        background-image: linear-gradient(90deg,#8c1a17,#cd122d);
+        padding: 6px 8px;
+        border-radius: 3px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .header__mobile__logo-culer i {
+        margin-right: 4px;
+        transform: translateY(2px);
+    }
+
+    .header__mobile__service {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
+        background: linear-gradient(90deg,#cd122d 0,#154284);
+    }
+    .header__mobile__service-item {
+        display: flex;
+        flex: 1 0 auto;
+        color: #fff;
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        line-height: 44px;
+        font-size: 16px;
+    }
+    .header__mobile__service-item i:first-child {
+        margin-right: 8px;
+        line-height: 44px;
+        font-size: 20px;
+    }
+
+    .header__mobile__service-item i:last-child {
+        font-size: 10px;
+        transform: translateY(10px);
+        margin-left: 6px;
+    }
+    .header__mobile__service-item::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        background-color: hsla(0,0%,100%,.25);
+        width: 1px;
+        height: 24px;
+        transform: translateY(-50%);
+    }
+
+    #content .content__slider {
+        z-index: 1;
+        height: 116px;
+    }
+    .content__heading {
+        position: relative;
+        justify-content: center;
+        width: 100%;
+        background: linear-gradient(0deg,#181733 0,rgba(24,23,51,.45) 70%,rgba(24,23,51,0));
+    }
+    .content__heading h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 42px;
+        width: 100%;
+    }
+
+    #content .content__clb .content__team {
+        margin: 0 8px;
+    }
+    .content__team .team__desc {
+        padding: 16px 24px;
+    }
+
+    .content__team .team__desc > h3 {
+        font-size: 16px;
+    }
+    .content__team .team__desc__media {
+        display: block;
+        text-align: center;
+    }
+    .content__team .team__desc__media h3 {
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    .content__team .team__desc__media img {
+        height: 42px;
+        width: 42px;
+    }
+
+
+    .team__award {
+        padding: 0;
+    }
+    .team__award__list {
+        flex-wrap: nowrap;
+        height: 186px;
+        padding: 0;
+    }
+    .team__award__item {
+        height: 100%;
+        width: calc(25% - 8px);
+        margin: 0 4px;
+    }
+    .team__award__background {
+        background-image: url('../img/horizontal-flash-mobile.jpg');
+        top: 18px;
+    }
+    .team__award__background-text {
+        top: 14px;
+        height: 36px;
+    }
+    .team__award__item-content {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .award__item__title {
+        font-size: 9px;
+        height: 24px;
+        padding: 4px 8px;
+        width: 100%;
+        margin: 0;
+        line-height: 10px;
+        text-align: center;
+    }
+    .team__award__item-content img {
+        height: 44px;
+        width: 34px;
+    }
+    .award__item__amount {
+        font-size: 38px;
+        line-height: 46px;
+        text-align: center;
+    }
+    .award__item__trophie {
+        font-size: 8px;
+        line-height: 9px;
+        text-align: center;
+        padding-bottom: 8px;
+    }
+
+    /* Footer */
+
+    .team__partners__logo {
+        border: none;
+    }
+
+    .team__partners__media p {
+        position: relative;
+        text-align: center;
+    }
+
+    .team__partners__media p::before {
+        left: 0;
+    }
+    .team__partners__media p::after {
+        right: 0;
+    }
+
+    .team__partners__media p::after,
+    .team__partners__media p::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        background: #fdc52c;
+        width: calc(50% - 70px);
+        height: 2px;
+    }
+
+
+    .footer__social__media {
+        max-width: none;
+        flex: 0 1 30%;
+    }
+
+    .footer__club {
+        flex-wrap: wrap;
+    }
+    .footer__team {
+        width: 25%;
+        margin-bottom: 16px;
+    }
+    .footer__team__players {
+        padding-top: 16px;
+    }
+    .footer__team__players li {
+        height: 24px;
+    }
+
+    .footer__corporate__link {
+        flex-direction: column;
+    }
+    .footer__corporate__copyright {
+        width: 100%;
+    }
+    .footer__corporate__group {
+        flex-direction: column;
+        margin-top: 16px;
+    }
+    .footer__corporate__group li + li {
+        border: none;
+        margin-top: 12px;
+    }
+
+
+
+}
+
+@media (max-width: 640px) {
+    .footer__team {
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 400px) and (max-width:800px) {
+    .col-m-6 {
+        width: 50%;
+    }
+    
+}
+
+
+@media (min-width: 500px) and (max-width:750px) {
+    .team__member__info__first-name {
+        font-size: 14px;
+    }
+    .member__stats__footer__alltime-title {
+        font-size: 8px;
+    }
+    .member__stats__footer__alltime-value {
+        font-size: 10px;
+    }
+    .content__heading h1 {
+        font-size: 36px;
+    }
+    
+}
+ 
+@media (max-width: 500px) {
+    .col-s-12 {
+        width: 100%;
+    }
+    .header__mobile__logo-name h2 {
+        font-size: 18px;  
+    }
+    .header__mobile__logo-name img {
+        width: 28px;
+        height: 28px;
+    }
+
+
+
+    .team__member__info__number {
+        display: inline-block;
+    }
+    .team__member__info__first-name {
+        display: inline-block;
+    }
+    .content__heading h1 {
+        font-size: 28px;
+    }
+    
+}
+
+@media (max-width: 400px) {
+    .header__mobile__service-item {
+        font-size: 12px;
+    }
+    .header__mobile__service-item i:first-child {
+        font-size: 18px;
+    }
+    .content__heading h1 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 650px) {
+    .team__coach .team__coach__item span {
+        font-size: 16px;
+    }
+    .partners__logo__item {
+        width: 27%;
+    }
+}
+@media (max-width: 480px) {
+    .team__coach .team__coach__item span {
+        width: 100%;
+    }
+    .team__list .team__coach {
+        margin-top: 48px;
+    }
+}
+
+@media (max-width: 440px) {
+    .footer__social__media {
+        flex-basis: auto;
+        width: calc(50% - 8px );
+    }
+}

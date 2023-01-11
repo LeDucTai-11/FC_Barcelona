@@ -7,11 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FC Barcelona</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
@@ -24,8 +26,20 @@
 
       <div class="header__choice">
         <div class="header__media">
+           <!-- Update -->
+          
+          <!-- END -->
+          
+          <!-- <div class="header__media__list">
+            
+          </div> -->
           <div class="media__social">
-            <span style="font-size: 9px;"><b>Follow fc Barcelona</b></span>
+
+            <div class="header__logo-tablet">
+              <img src="./assets/img/logo.png" alt="logo">
+              <h2>FC Barcelona</h2>
+            </div>
+            <span class="media__social__follow" style="font-size: 9px;"><b>Follow <span class="media__heading--none">fc Barcelona</span></b></span>
             <div class="media__social__item">
               <i class="fa-brands fa-twitter"></i>
             </div>
@@ -47,37 +61,45 @@
           </div>
 
           <div class="media__fan">
-            <div class="media__fan__item fan__login">
-              <i class="fa-solid fa-user"></i>
-              <strong>Login</strong>
+            <div class="media__fan__list">
+              <div class="media__fan__user">
+                <div class="fan__user-item fan__user__login">
+                  <i class="fa-solid fa-user"></i>
+                  <strong>Login</strong>
+                </div>
+    
+                <div class="fan__user-item fan__user__register">
+                  <div class="fan__user__register-btn">
+                    <img src="./assets/img/logo.png" alt="" width="20px">
+                    <strong>Register as a Culer</strong>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="fan__language">
+                <span>EN
+                  <i class="fa-solid fa-sort-down"></i>
+                </span>
+                <ul class="fan__language__choice">
+                  <li>Choose your language</li>
+                  <li class="fan__language-item fan__language__choice--active">
+                    English
+                    <span>Viewing</span>
+                  </li>
+                  <li class="fan__language-item">Català</li>
+                  <li class="fan__language-item">Castellano</li>
+                  <li class="fan__language-item">Français</li>
+                  <li class="fan__language-item">日本語</li>
+                  <li class="fan__language-item">中文</li>
+                </ul>
+              </div>
             </div>
 
-            <div class="fan__register">
-              <img src="./assets/img/logo.png" alt="" width="20px">
-              <strong>Register as a Culer</strong>
-            </div>
-
-            <div class="media__fan__item fan__language">
-              <span>EN
-                <i class="fa-solid fa-sort-down"></i>
-              </span>
-              <ul class="fan__language__choice">
-                <li>Choose your language</li>
-                <li class="fan__language-item fan__language__choice--active">
-                  English
-                  <span>Viewing</span>
-                </li>
-                <li class="fan__language-item">Català</li>
-                <li class="fan__language-item">Castellano</li>
-                <li class="fan__language-item">Français</li>
-                <li class="fan__language-item">日本語</li>
-                <li class="fan__language-item">中文</li>
-              </ul>
-            </div>
-
-            <div class="media__fan__item fan__site">
-              <strong>All Barca sites</strong>
-              <img src="./assets/img/logo.png" alt="" width="20px">
+            <div class="media__fan__list">
+              <div class="fan__site">
+                <strong>All Barca sites</strong>
+                <img src="./assets/img/logo.png" alt="" width="20px">
+              </div>
             </div>
           </div>
         </div>
@@ -215,15 +237,53 @@
               </div>
             </div>
           </div>
-          <div class="service__search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            
+          <div class="service__item service__search">
+            <div class="service__search__btn">
+              <i class="fa-solid fa-magnifying-glass" id="service__search-icon"></i>
+            </div>
+            <div class="service__search__nav">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" class="service__search__nav-input" placeholder="Search FC Barcelona for teams,players,news and videos">
+              <button class="service__search__nav-btn">Search now</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
 
+  </header>
+
+  <header id="header__mobile">
+    <div class="header__mobile__logo">
+      <div class="header___mobile__logo-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="header__mobile__logo-name">
+        <img src="./assets/img/logo.png" alt="logo">
+        <h2>FC Barcelona</h2>
+      </div>
+      <div class="header__mobile__logo-fan">
+        <div class="header__mobile__logo-culer">
+          <i class="fa-solid fa-user"></i>
+          <p>Culers</p>
+        </div>
+      </div>
+    </div>
+    <div class="header__mobile__service">
+      <div class="header__mobile__service-item">
+        <i class="fa-solid fa-ticket"></i>
+        <p>Tickets & Museum</p>
+      </div>
+      <div class="header__mobile__service-item">
+        <i class="fa-solid fa-shirt"></i>
+        <p>Shop</p>
+        <i class="fa-regular fa-circle-up"></i>
+      </div>
+      <div class="header__mobile__service-item">
+        <i class="fa-brands fa-youtube"></i>
+        <p>Barca Tv+</p>
+      </div>
   </header>
   <ul class="header__navbar">
     <li>Lastest</li>
@@ -241,7 +301,9 @@
     <div class="content__slider">
       <img src="./assets/img/stripes-left.png" alt="">
       <div class="slider__layout"></div>
-      <h1>FC Barcelona - First Team</h1>
+      <div class="content__heading">
+        <h1>FC Barcelona - First Team</h1>
+      </div>
     </div>
 
     <div class="content__clb">
@@ -268,7 +330,7 @@
           <div class="team__item" id="goalkeepers">
             <h1>Goalkeepers</h1>
             <div class="team__member__list row">
-              <div class="team__item__member col col-4">
+              <div class="col col-4 col-s-12 col-m-6"><div class="team__item__member stegen__member">
                 <img src="./assets/img/goalkeepers/01-MARC-ANDRE_TER_STEGEN.webp" alt="">
                 <span class="team__member__info__large-name">Stegen</span>
                 <div class="team__member__info">
@@ -300,32 +362,33 @@
                     </li>
                   </ul>
                 </div>
-              </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/goalkeepers/26-INAKI_PENA.webp" alt="">
-                <span class="team__member__info__large-name">Peña</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">13</span>
-                  <span class="team__member__info__last-name">Iñaki Peña</span>
-                  <p class="team__member__info__position">Goalkeeper</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">1</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">1</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Saves</span>
-                      <span class="member__stats__footer__alltime-value">0</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">0</span>
-                    </li>
-                  </ul>
+              </div></div>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/goalkeepers/26-INAKI_PENA.webp" alt="">
+                  <span class="team__member__info__large-name">Peña</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">13</span>
+                    <span class="team__member__info__last-name">Iñaki Peña</span>
+                    <p class="team__member__info__position">Goalkeeper</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">1</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">1</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Saves</span>
+                        <span class="member__stats__footer__alltime-value">0</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">0</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -334,418 +397,427 @@
           <div class="team__item" id="defenders">
             <h1>Defenders</h1>
             <div class="team__member__list row">
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/defenders/02-HECTOR_BELLERIN_.webp" alt="">
-                <span class="team__member__info__large-name">Bellerín</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">2</span>
-                  <span class="team__member__info__first-name">Héctor</span>
-                  <span class="team__member__info__last-name">Bellerín</span>
-                  <p class="team__member__info__position">Defender</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">5</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">5</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/defenders/04-RONALD_ARAUJO_.webp" alt="">
-                <span class="team__member__info__large-name">Araújo</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">4</span>
-                  <span class="team__member__info__first-name">Ronald</span>
-                  <span class="team__member__info__last-name">Araujo</span>
-                  <p class="team__member__info__position">Defender</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">89</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">7</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">6</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">0</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">1</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">0</span>
-                    </li>
-                  </ul>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/defenders/02-HECTOR_BELLERIN_.webp" alt="">
+                  <span class="team__member__info__large-name">Bellerín</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">2</span>
+                    <span class="team__member__info__first-name">Héctor</span>
+                    <span class="team__member__info__last-name">Bellerín</span>
+                    <p class="team__member__info__position">Defender</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">5</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">5</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/defenders/15-ANDREAS_CHRISTENSEN.webp" alt="">
-                <span class="team__member__info__large-name">Christensen</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">15</span>
-                  <span class="team__member__info__first-name">Andreas</span>
-                  <span class="team__member__info__last-name">Christensen</span>
-                  <p class="team__member__info__position">Defender</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">9</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">9</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">1</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">1</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="team__member__list row">
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/defenders/17-MARCOS_ALONSO.webp" alt="">
-                <span class="team__member__info__large-name">Alonso</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">17</span>
-                  <span class="team__member__info__first-name">Marcos</span>
-                  <span class="team__member__info__last-name">Alonso</span>
-                  <p class="team__member__info__position">Defender</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">13</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">13</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">2</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">2</span>
-                    </li>
-                  </ul>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/defenders/04-RONALD_ARAUJO_.webp" alt="">
+                  <span class="team__member__info__large-name">Araújo</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">4</span>
+                    <span class="team__member__info__first-name">Ronald</span>
+                    <span class="team__member__info__last-name">Araujo</span>
+                    <p class="team__member__info__position">Defender</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">89</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">7</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">6</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">0</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">1</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">0</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/defenders/18-JORDI_ALBA.webp" alt="">
-                <span class="team__member__info__large-name">Alba</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">18</span>
-                  <span class="team__member__info__first-name">Jordi</span>
-                  <span class="team__member__info__last-name">Alba</span>
-                  <p class="team__member__info__position">Defender</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">441</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">13</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">25</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">0</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">87</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">2</span>
-                    </li>
-                  </ul>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/defenders/15-ANDREAS_CHRISTENSEN.webp" alt="">
+                  <span class="team__member__info__large-name">Christensen</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">15</span>
+                    <span class="team__member__info__first-name">Andreas</span>
+                    <span class="team__member__info__last-name">Christensen</span>
+                    <p class="team__member__info__position">Defender</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">9</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">9</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">1</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">1</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/defenders/23-JULES_KOUNDE.webp" alt="">
-                <span class="team__member__info__large-name">Kounde</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">23</span>
-                  <span class="team__member__info__first-name">Jules</span>
-                  <span class="team__member__info__last-name">Kounde</span>
-                  <p class="team__member__info__position">Defender</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">11</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">11</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">3</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">3</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="team__member__list row">
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/defenders/24-ERIC_GARCIA.webp" alt="">
-                <span class="team__member__info__large-name">García</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">24</span>
-                  <span class="team__member__info__first-name">Eric</span>
-                  <span class="team__member__info__last-name">García</span>
-                  <p class="team__member__info__position">Defender</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">49</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">13</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">1</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">1</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assist</span>
-                      <span class="member__stats__footer__alltime-value">1</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">1</span>
-                    </li>
-                  </ul>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/defenders/17-MARCOS_ALONSO.webp" alt="">
+                  <span class="team__member__info__large-name">Alonso</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">17</span>
+                    <span class="team__member__info__first-name">Marcos</span>
+                    <span class="team__member__info__last-name">Alonso</span>
+                    <p class="team__member__info__position">Defender</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">13</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">13</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">2</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">2</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/defenders/18-JORDI_ALBA.webp" alt="">
+                  <span class="team__member__info__large-name">Alba</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">18</span>
+                    <span class="team__member__info__first-name">Jordi</span>
+                    <span class="team__member__info__last-name">Alba</span>
+                    <p class="team__member__info__position">Defender</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">441</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">13</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">25</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">0</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">87</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">2</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/defenders/23-JULES_KOUNDE.webp" alt="">
+                  <span class="team__member__info__large-name">Kounde</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">23</span>
+                    <span class="team__member__info__first-name">Jules</span>
+                    <span class="team__member__info__last-name">Kounde</span>
+                    <p class="team__member__info__position">Defender</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">11</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">11</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">3</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">3</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+  
+              </div>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/defenders/24-ERIC_GARCIA.webp" alt="">
+                  <span class="team__member__info__large-name">García</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">24</span>
+                    <span class="team__member__info__first-name">Eric</span>
+                    <span class="team__member__info__last-name">García</span>
+                    <p class="team__member__info__position">Defender</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">49</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">13</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">1</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">1</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assist</span>
+                        <span class="member__stats__footer__alltime-value">1</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">1</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
           </div>
 
           <div class="team__item" id="midfielders">
             <h1>Midfielders</h1>
             <div class="team__member__list row">
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/midfielders/05-SERGIO_.webp" alt="">
-                <span class="team__member__info__large-name">Busquets</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">5</span>
-                  <span class="team__member__info__first-name">Sergio</span>
-                  <span class="team__member__info__last-name">Busquets</span>
-                  <p class="team__member__info__position">Midfielder</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">697</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">17</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">18</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">0</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">37</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">1</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/midfielders/08-PEDRI.webp" alt="">
-                <span class="team__member__info__large-name">Pedri</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">8</span>
-                  <span class="team__member__info__last-name">Pedri</span>
-                  <p class="team__member__info__position">Midfielder</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">94</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">20</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">12</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">3</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">7</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">0</span>
-                    </li>
-                  </ul>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/midfielders/05-SERGIO_.webp" alt="">
+                  <span class="team__member__info__large-name">Busquets</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">5</span>
+                    <span class="team__member__info__first-name">Sergio</span>
+                    <span class="team__member__info__last-name">Busquets</span>
+                    <p class="team__member__info__position">Midfielder</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">697</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">17</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">18</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">0</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">37</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">1</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/midfielders/19-FRANCK_KESSIE.webp" alt="">
-                <span class="team__member__info__large-name">Kessie</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">19</span>
-                  <span class="team__member__info__first-name">Franck</span>
-                  <span class="team__member__info__last-name">Kessie</span>
-                  <p class="team__member__info__position">Midfielder</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">13</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">13</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">1</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">1</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="team__member__list row">
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/midfielders/20-S_ROBERTO.webp" alt="">
-                <span class="team__member__info__large-name">Roberto</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">20</span>
-                  <span class="team__member__info__first-name">Sergi</span>
-                  <span class="team__member__info__last-name">Roberto</span>
-                  <p class="team__member__info__position">Midfielder</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">329</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">13</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">14</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">2</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">39</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">2</span>
-                    </li>
-                  </ul>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/midfielders/08-PEDRI.webp" alt="">
+                  <span class="team__member__info__large-name">Pedri</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">8</span>
+                    <span class="team__member__info__last-name">Pedri</span>
+                    <p class="team__member__info__position">Midfielder</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">94</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">20</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">12</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">3</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">7</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">0</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/midfielders/21-FRENKIE_DE_JONG.webp" alt="">
-                <span class="team__member__info__large-name">Jong</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">21</span>
-                  <span class="team__member__info__first-name">Frenkie</span>
-                  <span class="team__member__info__last-name">de Jong</span>
-                  <p class="team__member__info__position">Midfielder</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">158</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">18</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">15</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">2</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">16</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">1</span>
-                    </li>
-                  </ul>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/midfielders/19-FRANCK_KESSIE.webp" alt="">
+                  <span class="team__member__info__large-name">Kessie</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">19</span>
+                    <span class="team__member__info__first-name">Franck</span>
+                    <span class="team__member__info__last-name">Kessie</span>
+                    <p class="team__member__info__position">Midfielder</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">13</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">13</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">1</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">1</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/midfielders/30-GAVI_.webp" alt="">
-                <span class="team__member__info__large-name">Gavi</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">30</span>
-                  <span class="team__member__info__last-name">Gavi</span>
-                  <p class="team__member__info__position">Midfielder</p>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/midfielders/20-S_ROBERTO.webp" alt="">
+                  <span class="team__member__info__large-name">Roberto</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">20</span>
+                    <span class="team__member__info__first-name">Sergi</span>
+                    <span class="team__member__info__last-name">Roberto</span>
+                    <p class="team__member__info__position">Midfielder</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">329</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">13</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">14</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">2</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">39</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">2</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">67</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">20</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">2</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">0</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">6</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">1</span>
-                    </li>
-                  </ul>
+              </div>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/midfielders/21-FRENKIE_DE_JONG.webp" alt="">
+                  <span class="team__member__info__large-name">Jong</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">21</span>
+                    <span class="team__member__info__first-name">Frenkie</span>
+                    <span class="team__member__info__last-name">de Jong</span>
+                    <p class="team__member__info__position">Midfielder</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">158</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">18</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">15</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">2</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">16</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">1</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/midfielders/30-GAVI_.webp" alt="">
+                  <span class="team__member__info__large-name">Gavi</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">30</span>
+                    <span class="team__member__info__last-name">Gavi</span>
+                    <p class="team__member__info__position">Midfielder</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">67</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">20</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">2</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">0</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">6</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">1</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -754,208 +826,216 @@
           <div class="team__item" id="forwards">
             <h1>Forwards</h1>
             <div class="team__member__list row">
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/forwards/07-OUSMANE_DEMBELE.webp" alt="">
-                <span class="team__member__info__large-name">Dembélé</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">7</span>
-                  <span class="team__member__info__first-name">Ousmane</span>
-                  <span class="team__member__info__last-name">Dembélé</span>
-                  <p class="team__member__info__position">Forward</p>
-                </div>
 
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">171</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">21</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">37</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">5</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">40</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">7</span>
-                    </li>
-                  </ul>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/forwards/07-OUSMANE_DEMBELE.webp" alt="">
+                  <span class="team__member__info__large-name">Dembélé</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">7</span>
+                    <span class="team__member__info__first-name">Ousmane</span>
+                    <span class="team__member__info__last-name">Dembélé</span>
+                    <p class="team__member__info__position">Forward</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">171</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">21</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">37</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">5</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">40</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">7</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/forwards/09-ROBERT_LEWANDOWSKI.webp" alt="">
+                  <span class="team__member__info__large-name">Lewandowski</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">9</span>
+                    <span class="team__member__info__first-name">Robert</span>
+                    <span class="team__member__info__last-name">Lewandowski</span>
+                    <p class="team__member__info__position">Forward</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">20</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">20</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">18</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">18</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">4</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">4</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/forwards/10-ANSU_FATI.webp" alt="">
+                  <span class="team__member__info__large-name">Fati</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">10</span>
+                    <span class="team__member__info__first-name">Ansu</span>
+                    <span class="team__member__info__last-name">Fati</span>
+                    <p class="team__member__info__position">Forward</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">79</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">21</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">22</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">3</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">6</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">3</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/forwards/11-FERRAN_TORRES.webp" alt="">
+                  <span class="team__member__info__large-name">Torres</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">11</span>
+                    <span class="team__member__info__first-name">Ferran</span>
+                    <span class="team__member__info__last-name">Torres</span>
+                    <p class="team__member__info__position">Forward</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">45</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">19</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">12</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">5</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">7</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">1</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/forwards/09-ROBERT_LEWANDOWSKI.webp" alt="">
-                <span class="team__member__info__large-name">Lewandowski</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">9</span>
-                  <span class="team__member__info__first-name">Robert</span>
-                  <span class="team__member__info__last-name">Lewandowski</span>
-                  <p class="team__member__info__position">Forward</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">20</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">20</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">18</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">18</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">4</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">4</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/forwards/10-ANSU_FATI.webp" alt="">
-                <span class="team__member__info__large-name">Fati</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">10</span>
-                  <span class="team__member__info__first-name">Ansu</span>
-                  <span class="team__member__info__last-name">Fati</span>
-                  <p class="team__member__info__position">Forward</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">79</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">21</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">22</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">3</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">6</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">3</span>
-                    </li>
-                  </ul>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/forwards/14-MEMPHIS_DEPAY.webp" alt="">
+                  <span class="team__member__info__large-name">Depay</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">14</span>
+                    <span class="team__member__info__first-name">Memphis</span>
+                    <span class="team__member__info__last-name">Depay</span>
+                    <p class="team__member__info__position">Forward</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">41</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">3</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">14</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">1</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">2</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">0</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="team__member__list row">
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/forwards/11-FERRAN_TORRES.webp" alt="">
-                <span class="team__member__info__large-name">Torres</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">11</span>
-                  <span class="team__member__info__first-name">Ferran</span>
-                  <span class="team__member__info__last-name">Torres</span>
-                  <p class="team__member__info__position">Forward</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">45</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">19</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">12</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">5</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">7</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">1</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/forwards/14-MEMPHIS_DEPAY.webp" alt="">
-                <span class="team__member__info__large-name">Depay</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">14</span>
-                  <span class="team__member__info__first-name">Memphis</span>
-                  <span class="team__member__info__last-name">Depay</span>
-                  <p class="team__member__info__position">Forward</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">41</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">3</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">14</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">1</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">2</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">0</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="team__item__member col col-4">
-                <img src="./assets/img/forwards/22-RAPHINHA.webp" alt="">
-                <span class="team__member__info__large-name">Raphinha</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__number">22</span>
-                  <span class="team__member__info__last-name">Raphinha</span>
-                  <p class="team__member__info__position">Forward</p>
-                </div>
-
-                <div class="member__stats__footer">
-                  <ul class="member__stats__footer__list">
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Appearances</span>
-                      <span class="member__stats__footer__alltime-value">19</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">19</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Goals</span>
-                      <span class="member__stats__footer__alltime-value">2</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">2</span>
-                    </li>
-                    <li class="member__stats__footer__item">
-                      <span class="member__stats__footer__alltime-title">Barca Assists</span>
-                      <span class="member__stats__footer__alltime-value">4</span>
-                      <span class="member__stats__footer__season-title">2022/2023 Season</span>
-                      <span class="member__stats__footer__season-value">4</span>
-                    </li>
-                  </ul>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member">
+                  <img src="./assets/img/forwards/22-RAPHINHA.webp" alt="">
+                  <span class="team__member__info__large-name">Raphinha</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__number">22</span>
+                    <span class="team__member__info__last-name">Raphinha</span>
+                    <p class="team__member__info__position">Forward</p>
+                  </div>
+  
+                  <div class="member__stats__footer">
+                    <ul class="member__stats__footer__list">
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Appearances</span>
+                        <span class="member__stats__footer__alltime-value">19</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">19</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Goals</span>
+                        <span class="member__stats__footer__alltime-value">2</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">2</span>
+                      </li>
+                      <li class="member__stats__footer__item">
+                        <span class="member__stats__footer__alltime-title">Barca Assists</span>
+                        <span class="member__stats__footer__alltime-value">4</span>
+                        <span class="member__stats__footer__season-title">2022/2023 Season</span>
+                        <span class="member__stats__footer__season-value">4</span>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -964,18 +1044,20 @@
           <div class="team__item" id="coaches">
             <h1>Coaching Staff</h1>
             <div class="team__member__list row">
-              <div class="team__item__member col col-4 team__coach__member">
-                <img src="./assets/img/coach/00_XAVI_HERNANDEZ.webp" alt="">
-                <span class="team__member__info__large-name">Xavi</span>
-                <div class="team__member__info">
-                  <span class="team__member__info__last-name">Xavi</span>
-                  <p class="team__member__info__position">Coach</p>
+              <div class="col col-4 col-s-12 col-m-6">
+                <div class="team__item__member team__coach__member">
+                  <img src="./assets/img/coach/00_XAVI_HERNANDEZ.webp" alt="">
+                  <span class="team__member__info__large-name">Xavi</span>
+                  <div class="team__member__info">
+                    <span class="team__member__info__last-name">Xavi</span>
+                    <p class="team__member__info__position">Coach</p>
+                  </div>
                 </div>
               </div>
             </div>
 
             <div class="team__coach">
-              <div class="team__coach__item row">
+              <div class="team__coach__item">
                 <span>Assistant coach</span>
                 <span>ÒSCAR hernández</span>
               </div>
@@ -1005,40 +1087,48 @@
         <div class="team__award">
           <div class="team__award__list row">
             <div class="team__award__item col col-3">
-              <div class="award__item__content award__item__laliga">
+              <div class="team__award__background"></div>
+              <div class="team__award__background-text"></div>
+              <div class="team__award__item-content">
                 <span class="award__item__title">La Liga</span>
-                <img src="./assets/img/cup/laliga.png" alt="">
+                <img src="./assets/img/cup/laliga_cup.svg" alt="">
                 <span class="award__item__amount">26</span>
                 <span class="award__item__trophie">titles</span>
               </div>
             </div>
-
             <div class="team__award__item col col-3">
-              <div class="award__item__content award__item__c1">
+              <div class="team__award__background"></div>
+              <div class="team__award__background-text"></div>
+              <div class="team__award__item-content">
                 <span class="award__item__title">UEFA Champions League</span>
-                <img src="./assets/img/cup/c1.png" alt="">
+                <img src="./assets/img/cup/c1_cup.svg" alt="">
                 <span class="award__item__amount">5</span>
                 <span class="award__item__trophie">trophies</span>
               </div>
             </div>
 
             <div class="team__award__item col col-3">
-              <div class="award__item__content award__item__fifa">
+              <div class="team__award__background"></div>
+              <div class="team__award__background-text"></div>
+              <div class="team__award__item-content">
                 <span class="award__item__title">FIFA Club World Cup</span>
-                <img src="./assets/img/cup/fifa_club.png" alt="">
+                <img src="./assets/img/cup/fifa_club.svg" alt="">
                 <span class="award__item__amount">3</span>
                 <span class="award__item__trophie">trophies</span>
               </div>
             </div>
 
             <div class="team__award__item col col-3">
-              <div class="award__item__content award__item__copa">
+              <div class="team__award__background"></div>
+              <div class="team__award__background-text"></div>
+              <div class="team__award__item-content">
                 <span class="award__item__title">Copa Del Rey</span>
-                <img src="./assets/img/cup/copa.png" alt="">
+                <img src="./assets/img/cup/copa_del_rey.svg" alt="">
                 <span class="award__item__amount">31</span>
                 <span class="award__item__trophie">trophies</span>
               </div>
             </div>
+            
           </div>
         </div>
       </div>
@@ -1223,6 +1313,16 @@
 
     </div>
   </footer>
+
+  <script>
+    let serviceSearchBtn = document.querySelector('.service__search__btn');
+    let serviceSearchNav = document.querySelector('.service__search__nav');
+    let serviceSearchIcon = document.getElementById('service__search-icon');
+    serviceSearchBtn.addEventListener('click',function(){
+      serviceSearchIcon.classList.toggle('fa-xmark');
+      serviceSearchNav.classList.toggle('service__search__nav--open');
+    });
+  </script>
 </body>
 
 </html>
