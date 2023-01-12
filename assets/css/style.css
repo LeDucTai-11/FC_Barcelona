@@ -803,11 +803,10 @@ html {
 }
 
 .team__list .team__item {
-    padding: 38px 0px 26px;
+    padding: 46px 0px 26px;
 }
 
 .team__list .team__item h1 {
-    padding-top: 32px;
     padding-bottom: 34px;
     text-align: center;
     color: #742956;
