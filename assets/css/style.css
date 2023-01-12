@@ -231,7 +231,7 @@ html {
     margin: 0 8px;
     padding-bottom: 16px;
     padding-left: 2px; 
-    z-index: 100;
+    z-index: 101;
     line-height: normal;
     /* opacity: 0; */
     transform: scale(0);
@@ -593,16 +593,18 @@ html {
 .service__team .service__barca__team .barca__team__tittle {
     color: #fdc52c;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 800;
     padding: 0 52px;
 }
 
 .service__team .service__barca__team .barca__team {
-    padding: 0 36px;
+    padding: 8px 36px 0;
+    text-align: left;
 
 }
 .service__team .service__barca__team .barca__team p {
     font-size: 13px;
+    font-weight: 500;
 }
 
 .service__team .service__barca__team .barca__team:last-child {
@@ -623,6 +625,7 @@ html {
 .service__team .service__barca__team .barca__team li {
     margin-top: 12px;
     font-size: 13px;
+    min-width: 120px;
 }
 /* END: Barca Team */
 
@@ -765,12 +768,15 @@ html {
     cursor: pointer;
 }
 
+.team__roles {
+    padding: 0 10px;
+}
+
 .content__team .team__role__list {
     padding-top: 24px;
     display: flex;
     justify-content: center;
 }
-
 .content__team .team__role__list .team__role__item {
     color: #222;
     font-weight: 800;
