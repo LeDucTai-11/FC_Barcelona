@@ -513,9 +513,6 @@
     .footer__team__players {
         padding-top: 16px;
     }
-    .footer__team__players li {
-        height: 24px;
-    }
 
     .footer__corporate__link {
         flex-direction: column;
