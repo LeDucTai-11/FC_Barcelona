@@ -174,6 +174,8 @@ html {
 }
 .media__fan__list {
     margin-right: 8px;
+    height: 100%;
+    position: relative;
 }
 .media__fan__user {
     display: flex;
@@ -295,9 +297,104 @@ html {
 .fan__site {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 .fan__site img {
     margin-left: 8px;
+}
+
+
+/* Update fan__site__panel */
+.fan__site__panel {
+    position: absolute;
+    background: linear-gradient(0deg,#154284 0,#181733);
+    width: 304px;
+    top: 0;
+    right: -8px;
+    margin: 0;
+    padding: 0;
+    z-index: 102;
+    transform: translateX(100%);
+    transition: transform .25s;
+    overflow-y: auto;
+    position: fixed;
+}
+.fan__site__panel::-webkit-scrollbar {
+    display: none;
+}
+.fan__site__panel--open {
+    box-shadow: -0.4rem 0 0.4rem 0 rgb(0 0 0 / 20%);
+    transform: translateX(0);
+}
+.fan__site__panel_title {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0 16px;
+}
+.fan__site__panel_title i {
+    font-size: 20px;
+}
+.fan__site__panel-list {
+    background: linear-gradient(0deg,#154284 0,#181733);
+    height: calc(100vh - 48px);
+}
+.fan__site__panel-item {
+    position: relative;
+}
+.fan__site__panel-item::before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: -1px;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #fff;
+    transition: width .1s;
+}
+.fan__site__panel-item::after {
+    display: block;
+    position: relative;
+    top: 0;
+    content: "";
+    height: 1px;
+    width: 90%;
+    background: hsla(0,0%,100%,.1);
+    margin: 0 auto;
+}
+
+.fan__site__panel-item:hover::before {
+    width: 2%;
+    background-color: #fff;
+}
+.fan__site__panel-item__desc {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 16px 20px 16px 16px;
+}
+
+.fan__site__panel-item__desc::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #cf122d;
+    top: 24px;
+    left: 52px;
+}
+.fan__site__panel-item-content {
+    padding-left: 76px;
+}
+.fan__site__panel-item__heading {
+    font-size: 15px;
+    font-weight: 700;
+}
+.fan__site__panel-item__summary {
+    font-size: 10px;
+    padding:4px 0 12px;
 }
 
 
